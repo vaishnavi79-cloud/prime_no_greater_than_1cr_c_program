@@ -1,0 +1,37 @@
+#include<stdio.h>
+#define limit 1000000000
+void main()
+{
+int is_prime;
+long int i,n,j;
+printf("enter any number");
+scanf("%d",&n);
+if(n%2==0)
+{
+is_prime=0;
+}
+else
+{
+for(i=10000000;i<=n-1;i++)
+{
+if(n%i!=0)
+{
+for(j=3;j<100;j++)
+{
+    if(n%j==0)
+    {
+        is_prime=0;
+        break;
+    }
+    else{
+        is_prime=1;
+    }
+}
+}
+}
+}
+if(is_prime)
+    printf("prime=%d",n);
+    else
+    printf("not prime=%d",n);
+}
